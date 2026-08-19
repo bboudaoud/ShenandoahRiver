@@ -1,0 +1,105 @@
+{
+  "title": "Shenandoah Dashboard",
+  "heading": "Shenandoah River",
+
+  "defaults": {
+    "state": "VA",
+    "refreshSeconds": 300,
+    "tempThresholds": {
+      "cold": 40,
+      "cool": 60,
+      "warm": 65,
+      "hot": 70,
+      "extreme": 75
+    }
+  },
+
+  "structure": [
+    {
+      "type": "fork",
+      "branches": [
+        {
+          "name": "North River",
+          "siteId": "01622000",
+          "flowThresholds": [100, 400, 800, 1500]
+        },
+        {
+          "name": "South River",
+          "siteId": "01627500",
+          "flowThresholds": [50, 200, 500, 1000]
+        }
+      ]
+    },
+    {
+      "type": "inflow",
+      "tributary": {
+        "name": "Middle River",
+        "siteId": "01625000",
+        "flowThresholds": [100, 400, 800, 1500]
+      }
+    },
+    {
+      "name": "Lynnwood",
+      "siteId": "01628500",
+      "flowThresholds": [500, 1500, 3000, 6000]
+    },
+    {
+      "name": "Luray",
+      "siteId": "01629500",
+      "flowThresholds": [800, 2000, 4000, 8000]
+    },
+    {
+      "name": "Front Royal",
+      "siteId": "01631000",
+      "flowThresholds": [1000, 2500, 5000, 10000]
+    },
+    {
+      "type": "inflow",
+      "tributary": {
+        "name": "North Fork Shenandoah",
+        "siteId": "01634000",
+        "flowThresholds": [400, 1200, 2500, 5000]
+      }
+    },
+    {
+      "type": "inflow",
+      "tributary": {
+        "name": "Cedar Creek",
+        "siteId": "01634500",
+        "flowThresholds": [20, 100, 300, 600]
+      }
+    },
+    {
+      "type": "inflow",
+      "tributary": {
+        "name": "Passage Creek",
+        "siteId": "01635500",
+        "flowThresholds": [20, 100, 300, 600]
+      }
+    },
+    {
+      "type": "inflow",
+      "tributary": {
+        "name": "Spout Run",
+        "siteId": "01636316",
+        "flowThresholds": [5, 20, 50, 150]
+      }
+    },
+    {
+      "type": "inflow",
+      "tributary": {
+        "name": "Bullskin Run",
+        "siteId": "01636464",
+        "state": "WV",
+        "flowThresholds": [5, 20, 50, 150]
+      }
+    },
+    {
+      "type": "terminal",
+      "name": "Millville",
+      "siteId": "01636500",
+      "state": "WV",
+      "flowThresholds": [2000, 5000, 10000, 20000]
+    }
+  ]
+}
