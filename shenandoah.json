@@ -5,6 +5,7 @@
   "defaults": {
     "state": "VA",
     "refreshSeconds": 300,
+    "maxAgeHours": 24,
     "tempThresholds": {
       "cold": 40,
       "cool": 60,
